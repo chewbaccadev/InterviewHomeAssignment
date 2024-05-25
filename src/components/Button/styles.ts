@@ -20,7 +20,7 @@ const getButtonStyles = (theme: Theme, variant?: ButtonVariants) => {
   }
 };
 
-export const StyledButton = styled.button<{ variant?: ButtonVariants }>`
+export const StyledButton = styled.button<{ $variant?: ButtonVariants }>`
   padding: ${({ theme }) => theme.spacing.medium};
   font-size: ${({ theme }) => theme.typography.fontSizes.medium};
   border: none;
@@ -32,5 +32,5 @@ export const StyledButton = styled.button<{ variant?: ButtonVariants }>`
     opacity: 0.8;
   }
 
-  ${({ theme, variant }) => getButtonStyles(theme as Theme, variant)}
+  ${({ theme, $variant }) => getButtonStyles(theme as Theme, $variant)}
 `;
